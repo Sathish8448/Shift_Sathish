@@ -1,0 +1,219 @@
+/* AppLayout */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.desktop-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.mobile-content {
+  padding-top: 60px; /* Space for header */
+  padding-bottom: 70px; /* Space for mobile nav */
+  height: 100vh;
+}
+
+/* Header */
+.app-header {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.header-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #374151;
+}
+
+.role-badge {
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role-admin { background: #fee2e2; color: #b91c1c; }
+.role-manager { background: #fef3c7; color: #b45309; }
+.role-user { background: #dbeafe; color: #1d4ed8; }
+
+.logout-btn {
+  padding: 0.375rem 0.75rem;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+.logout-btn:hover { background: #e5e7eb; }
+
+/* Sidebar */
+.app-sidebar {
+  width: 250px;
+  background: #1f2937;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid #374151;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+  background: #374151;
+  color: white;
+}
+
+.nav-divider {
+  height: 1px;
+  background: #374151;
+  margin: 1rem 0;
+}
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid #374151;
+}
+
+.user-profile {
+  margin-bottom: 1rem;
+}
+
+.user-profile .user-name {
+  color: white;
+  font-weight: 600;
+}
+
+.user-profile .user-role {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+.logout-btn-sidebar {
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.logout-btn-sidebar:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* Mobile Nav */
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 20;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  text-decoration: none;
+  flex: 1;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-nav-item:active {
+  background: #f3f4f6;
+}
+
+.mobile-nav-item .icon {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.mobile-nav-item .label {
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.relative { position: relative; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}

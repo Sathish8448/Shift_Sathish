@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-black: #1a1a1a;
+  --color-white: #ffffff;
+  --color-grey: #666666;
+  --color-light-grey: #f0f0f0;
+  --color-dark-grey: #333333;
+  --color-danger: #dc3545;
+  --color-success: #28a745;
+  
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-light-grey);
+  color: var(--color-black);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+  min-height: 44px; /* Touch-friendly */
+}
+
+.btn-primary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-dark-grey);
+}
+
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-grey);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-light-grey);
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-grey);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 16px; /* Prevents iOS zoom */
+  min-height: 44px;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 16px; }
+
+/* Desktop overrides */
+@media (min-width: 768px) {
+  /* Tablet up */
+}
+@media (min-width: 1024px) {
+  /* Desktop up */
+}
